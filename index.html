@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Material+Icons&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-blue: #1a365d;
+            --accent-cyan: #00b4d8;
+            --pdf-red: #e53e3e;
+            --text-dark: #2d3748;
+            --border-heavy: #cbd5e0;
+            --row-hover: #f1f5f9;
+        }
+        body { background-color: #ffffff; color: var(--text-dark); font-family: 'Noto Sans JP', sans-serif; margin: 0; padding: 20px 0; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 15px; }
+        .main-header { border-left: 8px solid var(--accent-cyan); padding: 10px 20px; margin-bottom: 40px; background: #f8fafc; border-radius: 0 8px 8px 0; }
+        .main-header h1 { margin: 0; font-size: 1.8rem; color: var(--main-blue); font-weight: 700; }
+        .lecture-row { display: flex; align-items: center; padding: 25px 15px; border-bottom: 3px solid var(--border-heavy); transition: all 0.2s ease; }
+        .lecture-row:hover { background-color: var(--row-hover); border-bottom-color: var(--main-blue); }
+        .info-area { display: flex; align-items: center; gap: 15px; min-width: 140px; flex-shrink: 0; }
+        .lecture-num { font-weight: 700; color: #ffffff; font-size: 0.9rem; background: var(--main-blue); padding: 5px 12px; border-radius: 4px; }
+        .date { color: #4a5568; font-size: 0.9rem; font-weight: 700; }
+        .title-area { flex-grow: 1; padding: 0 20px; font-weight: 700; font-size: 1.1rem; color: var(--text-dark); }
+        .button-group { display: flex; gap: 12px; flex-shrink: 0; }
+        .btn { display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; font-weight: 700; font-size: 0.85rem; height: 44px; width: 140px; border-radius: 8px; transition: all 0.2s ease; box-sizing: border-box; }
+        .btn-detail { background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%); color: white; border: none; box-shadow: 0 4px 6px rgba(0, 180, 216, 0.2); }
+        .btn-pdf { background-color: white; color: var(--pdf-red); border: 2px solid var(--pdf-red); }
+        .btn-pdf:hover { background-color: var(--pdf-red); color: white; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); }
+        .material-icons { font-size: 1.2rem; }
+        @media (max-width: 768px) {
+            .lecture-row { flex-direction: column; align-items: flex-start; padding: 30px 15px; }
+            .info-area { margin-bottom: 12px; }
+            .title-area { margin-bottom: 20px; padding: 0; font-size: 1.2rem; }
+            .button-group { width: 100%; gap: 10px; }
+            .btn { flex: 1; width: auto; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="main-header">
+        <h1>2026年度 講義スケジュール</h1>
+    </div>
+
+    <div class="lecture-row">
+        <div class="info-area"><span class="lecture-num">第1回</span><span class="date">4/10</span></div>
+        <div class="title-area">導入講義・原子の電子配置</div>
+        <div class="button-group">
+            <a href="https://sites.google.com/view/iwamotok/2026%E7%84%A1%E6%A9%9F%E5%8C%96%E5%AD%A6/%E7%AC%AC1%E5%9B%9E4%E6%9C%8815%E6%97%A5" target="_blank" class="btn btn-detail">詳細ページへ</a>
+            <a href="https://drive.google.com/file/d/1E4Nb7oFcxTd4Anaiz2g1gCp8YA0qWDzQ/view?usp=sharing" target="_blank" class="btn btn-pdf"><span class="material-icons">picture_as_pdf</span>講義資料PDF</a>
+        </div>
+    </div>
+
+    <div class="lecture-row">
+        <div class="info-area"><span class="lecture-num">第2回</span><span class="date">4/17</span></div>
+        <div class="title-area">4つの量子数・有効核電荷・混成軌道</div>
+        <div class="button-group">
+            <a href="https://sites.google.com/view/iwamotok/2026%E7%84%A1%E6%A9%9F%E5%8C%96%E5%AD%A6/%E7%AC%AC2%E5%9B%9E4%E6%9C%8822%E6%97%A5" target="_blank" class="btn btn-detail">詳細ページへ</a>
+            <a href="https://drive.google.com/file/d/1yXmEAeLolOzJJk53O_u2zA7fplwXcZXN/view?usp=sharing" target="_blank" class="btn btn-pdf"><span class="material-icons">picture_as_pdf</span>講義資料PDF</a>
+        </div>
+    </div>
+
+    <div class="lecture-row">
+        <div class="info-area"><span class="lecture-num">第3回</span><span class="date">4/24</span></div>
+        <div class="title-area">電気陰性度・水素・ルイス酸塩基</div>
+        <div class="button-group">
+            <a href="https://sites.google.com/view/iwamotok/2026%E7%84%A1%E6%A9%9F%E5%8C%96%E5%AD%A6/%E7%AC%AC3%E5%9B%9E4%E6%9C%8830%E6%97%A5" target="_blank" class="btn btn-detail">詳細ページへ</a>
+            <a href="https://drive.google.com/file/d/1_L0uZyS-6HsovqIoaboQCCisjEZibxgC/view?usp=sharing" target="_blank" class="btn btn-pdf"><span class="material-icons">picture_as_pdf</span>講義資料PDF</a>
+        </div>
+    </div>
+
+    <div class="lecture-row">
+        <div class="info-area"><span class="lecture-num">第4回</span><span class="date">5/1</span></div>
+        <div class="title-area">1族元素・クラウンエーテル</div>
+        <div class="button-group">
+            <a href="https://sites.google.com/view/iwamotok/2026%E7%84%A1%E6%A9%9F%E5%8C%96%E5%AD%A6/%E7%AC%AC4%E5%9B%9E5%E6%9C%8813%E6%97%A5" target="_blank" class="btn btn-detail">詳細ページへ</a>
+            <a href="https://drive.google.com/file/d/1c98_WLw0kaJM8pb1-G438n8iBOzyIrFJ/view?usp=sharing" target="_blank" class="btn btn-pdf"><span class="material-icons">picture_as_pdf</span>講義資料PDF</a>
+        </div>
+    </div>
+
+    <div class="lecture-row">
+        <div class="info-area"><span class="lecture-num">第5回</span><span class="date">5/8</span></div>
+        <div class="title-area">2族元素・13族制酸剤</div>
+        <div class="button-group">
+            <a href="https://sites.google.com/view/iwamotok/2026%E7%84%A1%E6%A9%9F%E5%8C%96%E5%AD%A6/%E7%AC%AC5%E5%9B%9E5%E6%9C%8820%E6%97%A5" target="_blank" class="btn btn-detail">詳細ページへ</a>
+            <a href="https://drive.google.com/file/d/160nF4qDtj8V76xh42tIDZnzEvdvZkcXp/view?usp=sharing" target="_blank" class="btn btn-pdf"><span class="material-icons">picture_as_pdf</span>講義資料PDF</a>
+        </div>
+    </div>
+
+    <div class="lecture-row">
+        <div class="info-area"><span class="lecture-num">第6回</span><span class="date">5/15</span></div>
+        <div class="title-area">ホウ素・ジボラン・BNCT</div>
+        <div class="button-group">
+            <a href="https://sites.google.com/view/iwamotok/2026%E7%84%A1%E6%A9%9F%E5%8C%96%E5%AD%A6/%E7%AC%AC6%E5%9B%9E5%E6%9C%8827%E6%97%A5" target="_blank" class="btn btn-detail">詳細ページへ</a>
+            <a href="https://drive.google.com/file/d/1KYG8WwLhmEf3I1Mu6-ffg9eitIA1nmFI/view?usp=sharing" target="_blank" class="btn btn-pdf"><span class="material-icons">picture_as_pdf</span>講義資料PDF</a>
+        </div>
+    </div>
+
+  <div class="lecture-row">
+        <div class="info-area"><span class="lecture-num">第7回</span><span class="date">5/22</span></div>
+        <div class="title-area">ハロゲン化ホウ素のルイス酸性・分子軌道法</div>
+        <div class="button-group">
+            <a href="https://sites.google.com/view/iwamotok/2026%E7%84%A1%E6%A9%9F%E5%8C%96%E5%AD%A6/%E7%AC%AC7%E5%9B%9E6%E6%9C%883%E6%97%A5" target="_blank" class="btn btn-detail">詳細ページへ</a>
+            
+            <a href="https://drive.google.com/file/d/1fIQkf7XqI4zN17nvvcDH8dPHzZqaeObW/view?usp=sharing" target="_blank" class="btn btn-pdf">
+                <span class="material-icons">picture_as_pdf</span>資料1
+            </a>
+            
+            <a href="https://drive.google.com/file/d/1CXXUgdBVATSSCNdSNxOMBd5XCgh1GCeH/view?usp=sharing" target="_blank" class="btn btn-pdf">
+                <span class="material-icons">picture_as_pdf</span>資料2
+            </a>
+        </div>
+    </div>
+    <div class="lecture-row">
+        <div class="info-area"><span class="lecture-num">第8回</span><span class="date">5/29</span></div>
+        <div class="title-area">一酸化窒素・その他の窒素酸化物</div>
+        <div class="button-group">
+            <a href="https://sites.google.com/view/iwamotok/2026%E7%84%A1%E6%A9%9F%E5%8C%96%E5%AD%A6/%E7%AC%AC8%E5%9B%9E6%E6%9C%8810%E6%97%A5" target="_blank" class="btn btn-detail">詳細ページへ</a>
+            <a href="https://drive.google.com/file/d/1sn_rknqCjClaI5MnJ-psTi14Gpb_XzcB/view?usp=sharing" target="_blank" class="btn btn-pdf"><span class="material-icons">picture_as_pdf</span>講義資料PDF</a>
+        </div>
+    </div>
+
+    <div class="lecture-row">
+        <div class="info-area"><span class="lecture-num">第9回</span><span class="date">6/5</span></div>
+        <div class="title-area">ジアゾ化・リンのオキソ酸・骨粗しょう症治療薬</div>
+        <div class="button-group">
+            <a href="https://sites.google.com/view/iwamotok/2026%E7%84%A1%E6%A9%9F%E5%8C%96%E5%AD%A6/%E7%AC%AC9%E5%9B%9E6%E6%9C%8817%E6%97%A5" target="_blank" class="btn btn-detail">詳細ページへ</a>
+            <a href="https://drive.google.com/file/d/1Z-krVTdeGEA0bNw_LHrVuMK6cEJhPcbe/view?usp=sharing" target="_blank" class="btn btn-pdf"><span class="material-icons">picture_as_pdf</span>講義資料PDF</a>
+        </div>
+    </div>
+
+    <div class="lecture-row">
+        <div class="info-area"><span class="lecture-num">第10回</span><span class="date">6/12</span></div>
+        <div class="title-area">活性酸素種・硫黄のオキソ酸・PDT</div>
+        <div class="button-group">
+            <a href="https://sites.google.com/view/iwamotok/2026%E7%84%A1%E6%A9%9F%E5%8C%96%E5%AD%A6/%E7%AC%AC10%E5%9B%9E6%E6%9C%8824%E6%97%A5" target="_blank" class="btn btn-detail">詳細ページへ</a>
+            <a href="https://drive.google.com/file/d/1U8oxr-CBYeXpUQknoJB5ZDfskQ8gSCrG/view?usp=sharing" target="_blank" class="btn btn-pdf"><span class="material-icons">picture_as_pdf</span>講義資料PDF</a>
+        </div>
+    </div>
+
+    <div class="lecture-row">
+        <div class="info-area"><span class="lecture-num">第11回</span><span class="date">6/19</span></div>
+        <div class="title-area">ハロゲンのオキソ酸・電荷移動錯体・結晶場理論</div>
+        <div class="button-group">
+            <a href="https://sites.google.com/view/iwamotok/2026%E7%84%A1%E6%A9%9F%E5%8C%96%E5%AD%A6/%E7%AC%AC11%E5%9B%9E7%E6%9C%881%E6%97%A5" target="_blank" class="btn btn-detail">詳細ページへ</a>
+            <a href="https://drive.google.com/file/d/1Ur5SoIjIpOuqTYz8-l7H_ClLyAOWCCJE/view?usp=sharing" target="_blank" class="btn btn-pdf"><span class="material-icons">picture_as_pdf</span>講義資料PDF</a>
+        </div>
+    </div>
+
+    <div class="lecture-row">
+        <div class="info-area"><span class="lecture-num">第12回</span><span class="date">6/26</span></div>
+        <div class="title-area">結晶場安定化エネルギー・錯安定度定数・キレート効果</div>
+        <div class="button-group">
+            <a href="https://sites.google.com/view/iwamotok/2026%E7%84%A1%E6%A9%9F%E5%8C%96%E5%AD%A6/%E7%AC%AC12%E5%9B%9E7%E6%9C%888%E6%97%A5" target="_blank" class="btn btn-detail">詳細ページへ</a>
+            <a href="https://drive.google.com/file/d/1gLgIUq1QNydmFXtnkT8N_6FK_r8dvN6m/view?usp=sharing" target="_blank" class="btn btn-pdf"><span class="material-icons">picture_as_pdf</span>講義資料PDF</a>
+        </div>
+    </div>
+
+    <div class="lecture-row">
+        <div class="info-area"><span class="lecture-num">第13回</span><span class="date">7/3</span></div>
+        <div class="title-area">トランス効果・シスプラチン</div>
+        <div class="button-group">
+            <a href="https://sites.google.com/view/iwamotok/2026%E7%84%A1%E6%A9%9F%E5%8C%96%E5%AD%A6/%E7%AC%AC13%E5%9B%9E7%E6%9C%8815%E6%97%A5" target="_blank" class="btn btn-detail">詳細ページへ</a>
+            <a href="https://drive.google.com/file/d/1zfqwrKvTUFNjJfN1gOVsjOCCISpDMcwf/view?usp=sharing" target="_blank" class="btn btn-pdf"><span class="material-icons">picture_as_pdf</span>講義資料PDF</a>
+        </div>
+    </div>
+
+    <div class="lecture-row">
+        <div class="info-area"><span class="lecture-num">第14回</span><span class="date">7/10</span></div>
+        <div class="title-area">キレート療法剤・金属含有医薬品</div>
+        <div class="button-group">
+            <a href="https://sites.google.com/view/iwamotok/2026%E7%84%A1%E6%A9%9F%E5%8C%96%E5%AD%A6/%E7%AC%AC14%E5%9B%9E7%E6%9C%8822%E6%97%A5" target="_blank" class="btn btn-detail">詳細ページへ</a>
+            <a href="https://drive.google.com/file/d/1tAqhIR0rK3U236RCmjUVEzU_KHhwtqWh/view?usp=sharing" target="_blank" class="btn btn-pdf"><span class="material-icons">picture_as_pdf</span>講義資料PDF</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
