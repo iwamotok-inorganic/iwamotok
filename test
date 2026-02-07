@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Material+Icons&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-navy: #0f172a;
+            --accent-gold: #fbbf24;
+            --accent-gold-dark: #d97706;
+            --btn-q: #334155;
+            --btn-a: #059669;
+            --btn-a-hover: #047857;
+            --card-border: #e2e8f0;
+        }
+
+        body { 
+            background-color: #ffffff; 
+            color: #1e293b;
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 40px 0;
+            line-height: 1.6;
+        }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        
+        .year-section { margin-bottom: 50px; }
+        
+        .year-label { 
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: #fff;
+            background: var(--primary-navy);
+            display: inline-block;
+            padding: 6px 35px;
+            transform: skewX(-15deg);
+            margin-bottom: 20px;
+            box-shadow: 4px 4px 0px var(--accent-gold);
+        }
+        .year-label span { display: inline-block; transform: skewX(15deg); }
+
+        .exam-card { 
+            background: #fff; 
+            border: 2px solid var(--card-border); 
+            border-left: 10px solid var(--primary-navy);
+            border-radius: 0 12px 12px 0; 
+            padding: 25px; 
+            margin-bottom: 25px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .exam-card:hover { 
+            transform: translateY(-5px); 
+            border-color: var(--accent-gold);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        }
+
+        .exam-title { font-size: 1.3rem; font-weight: 900; color: var(--primary-navy); margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+
+        .score-board { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); 
+            gap: 12px; 
+            margin-bottom: 20px; 
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid var(--card-border);
+        }
+        .score-item { text-align: center; border-right: 1px solid #e2e8f0; }
+        .score-item:last-child { border-right: none; }
+        .score-label { font-size: 0.75rem; color: #64748b; font-weight: 700; display: block; }
+        .score-val { font-size: 1.25rem; font-weight: 900; color: var(--primary-navy); }
+
+        /* ボタン強化デザイン */
+        .btn-group { display: flex; gap: 12px; flex-wrap: wrap; }
+        .btn { 
+            display: flex; align-items: center; justify-content: center; gap: 8px; 
+            text-decoration: none; padding: 12px 22px; border-radius: 10px; 
+            font-size: 0.95rem; font-weight: 700; transition: 0.2s; 
+            box-shadow: 0 4px 0px rgba(0,0,0,0.15); /* 影を少し強めて立体的に */
+            border: 1px solid rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+        .btn:active { transform: translateY(2px); box-shadow: 0 2px 0px rgba(0,0,0,0.1); }
+        
+        .btn-q { background: #f1f5f9; color: var(--btn-q); }
+        .btn-q:hover { background: #e2e8f0; color: #000; }
+        
+        .btn-a { background: var(--accent-gold); color: #000; }
+        .btn-a:hover { background: var(--accent-gold-dark); color: #fff; }
+
+        .btn-icon { font-size: 1.2rem; }
+
+        .dept-info { font-size: 0.85rem; color: #475569; margin-top: 15px; padding: 10px; background: #fffbeb; border-radius: 6px; border: 1px solid #fef3c7; }
+
+        .arc-row { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 18px 0; border-bottom: 1px solid #edf2f7; flex-wrap: wrap; gap: 12px; 
+        }
+        .arc-row:last-child { border-bottom: none; }
+        .arc-name { font-weight: 700; color: var(--primary-navy); }
+
+        @media (max-width: 600px) {
+            .score-item { border-right: none; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px; }
+            .score-item:last-child { border-bottom: none; padding-bottom: 0; }
+            .btn { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <section class="year-section">
+        <div class="year-label"><span>2025年度</span></div>
+        <div class="exam-card">
+            <div class="exam-title"><span class="material-icons" style="color:var(--accent-gold)">verified</span>期末試験</div>
+            <div class="score-board">
+                <div class="score-item"><span class="score-label">学年平均</span><span class="score-val">87.4<span>点</span></span></div>
+                <div class="score-item"><span class="score-label">最高点</span><span class="score-val">100<span>点</span></span></div>
+                <div class="score-item"><span class="score-label">最低点</span><span class="score-val">24<span>点</span></span></div>
+            </div>
+            <div class="btn-group">
+                <a href="https://drive.google.com/file/d/1SkTjm3yy4ZiF4Lu1HykD5Kg0FmOl5y1s/view?usp=sharing" target="_blank" class="btn btn-q"><span class="material-icons btn-icon">picture_as_pdf</span>問題</a>
+                <a href="https://drive.google.com/file/d/1ldj3NuXdpZZcAcgDSdMOTPai6o659xAl/view?usp=sharing" target="_blank" class="btn btn-a"><span class="material-icons btn-icon">assignment_turned_in</span>解答・配点</a>
+            </div>
+            <div class="dept-info">薬科学科平均: 86.1点 / 薬学科平均: 88.1点</div>
+        </div>
+    </section>
+
+    <section class="year-section">
+        <div class="year-label"><span>2024年度</span></div>
+        <div class="exam-card">
+            <div class="exam-title">期末試験</div>
+            <div class="score-board">
+                <div class="score-item"><span class="score-label">全体平均</span><span class="score-val">88.0<span>点</span></span></div>
+                <div class="score-item"><span class="score-label">最高点</span><span class="score-val">100<span>点</span></span></div>
+                <div class="score-item"><span class="score-label">最低点</span><span class="score-val">60<span>点</span></span></div>
+            </div>
+            <div class="btn-group">
+                <a href="https://drive.google.com/file/d/1xJyxBbtDI7KCjvw0AiazxuJ2gzpqgbot/view?usp=sharing" target="_blank" class="btn btn-q"><span class="material-icons btn-icon">picture_as_pdf</span>問題</a>
+                <a href="https://drive.google.com/file/d/1hikALTDYTnrMD5cSIqO7aWOwaUK97jMp/view?usp=sharing" target="_blank" class="btn btn-a"><span class="material-icons btn-icon">task_alt</span>解答</a>
+                <a href="/view/iwamotok/過去問/2024期末配点" class="btn btn-q" style="background:#64748b; color:#fff;"><span class="material-icons btn-icon">analytics</span>配点詳細</a>
+            </div>
+            <div class="dept-info">薬科学科: 84.9点 / 薬学科: 89.4点</div>
+        </div>
+    </section>
+
+    <section class="year-section">
+        <div class="year-label"><span>2023年度</span></div>
+        <div class="exam-card">
+            <div class="exam-title">期末試験</div>
+            <div class="score-board">
+                <div class="score-item"><span class="score-label">学年平均</span><span class="score-val">81.9<span>点</span></span></div>
+                <div class="score-item"><span class="score-label">最高点</span><span class="score-val">100<span>点</span></span></div>
+            </div>
+            <div class="btn-group">
+                <a href="https://drive.google.com/file/d/1hb-iKX5FWbA7R1x0lN8Sai9pVB7Wrm1q/view?usp=sharing" target="_blank" class="btn btn-q"><span class="material-icons btn-icon">picture_as_pdf</span>問題</a>
+                <a href="https://drive.google.com/file/d/17n-5EisFu6U-VMRjA_T-_mcP_Rg2FjPL/view?usp=sharing" target="_blank" class="btn btn-a"><span class="material-icons btn-icon">grading</span>採点基準・配点</a>
+            </div>
+            <div class="dept-info">薬科学科: 78.8点 / 薬学科: 82.4点</div>
+        </div>
+    </section>
+
+    <section class="year-section">
+        <div class="year-label"><span>2022年度</span></div>
+        <div class="exam-card">
+            <div class="exam-title">期末試験</div>
+            <div class="score-board">
+                <div class="score-item"><span class="score-label">全体平均</span><span class="score-val">76.8<span>点</span></span></div>
+                <div class="score-item"><span class="score-label">最高/最低</span><span class="score-val">100/47<span>点</span></span></div>
+            </div>
+            <div class="btn-group">
+                <a href="https://drive.google.com/file/d/1QmH5wilfhrCicA0Dg2x3zK77_TB3kC3R/view?usp=sharing" target="_blank" class="btn btn-q"><span class="material-icons btn-icon">picture_as_pdf</span>問題</a>
+                <a href="https://drive.google.com/file/d/1HsNx2UXmhmhC4fEzE6-XJdABisBMI-yK/view?usp=sharing" target="_blank" class="btn btn-a"><span class="material-icons btn-icon">done_all</span>解答例・配点</a>
+            </div>
+            <div class="dept-info">薬科学科: 76.0点 / 薬学科: 77.5点 / 追試対象3名</div>
+        </div>
+    </section>
+
+    <section class="year-section">
+        <div class="year-label"><span>2021年度</span></div>
+        <div class="exam-card">
+            <div class="exam-title">期末試験</div>
+            <div class="score-board">
+                <div class="score-item"><span class="score-label">全体平均</span><span class="score-val">70.3<span>点</span></span></div>
+            </div>
+            <div class="btn-group">
+                <a href="https://drive.google.com/file/d/1ae-RbXVcnYmz8YbpyVyW226y814WgJyr/view?usp=sharing" target="_blank" class="btn btn-q"><span class="material-icons btn-icon">picture_as_pdf</span>問題</a>
+                <a href="https://drive.google.com/file/d/1t-sFkHJ36_d8foww4KHnZR2PR-r01gzV/view?usp=sharing" target="_blank" class="btn btn-a"><span class="material-icons btn-icon">article</span>略解</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="year-section">
+        <div class="year-label"><span>2020年度</span></div>
+        <div class="exam-card" style="border-left-color: #94a3b8;">
+            <div class="exam-title">オンライン試験</div>
+            <p style="font-size: 0.9rem; color: #64748b;">新型コロナウイルス感染症対策のため、問題の掲載はありません。</p>
+            <div class="btn-group">
+                <a href="/view/iwamotok/過去問/2020年オンライン試験結果" class="btn btn-a"><span class="material-icons btn-icon">info</span>試験結果詳細</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="year-section">
+        <div class="year-label"><span>Archive (2019-2012)</span></div>
+        <div class="exam-card">
+            <div class="arc-row">
+                <span class="arc-name">2019年 期末試験 (平均74.6)</span>
+                <div class="btn-group">
+                    <a href="https://drive.google.com/file/d/18ZTVThayNNYBAfjX56nn4SMGAEQ7kdOH/view?usp=sharing" target="_blank" class="btn btn-q"><span class="material-icons btn-icon" style="font-size:1rem">picture_as_pdf</span>問題</a>
+                    <a href="https://drive.google.com/file/d/18QLWvWM-wm02tNaNPKUz_Mf0NezpboXy/view?usp=sharing" target="_blank" class="btn btn-a"><span class="material-icons btn-icon" style="font-size:1rem">article</span>略解</a>
+                </div>
+            </div>
+            <div class="arc-row">
+                <span class="arc-name">2018年 期末試験 (平均71.5)</span>
+                <div class="btn-group">
+                    <a href="https://drive.google.com/file/d/189aN_6SJssK6DeLbVJksN-8Fb3WnIzVN/view?usp=sharing" target="_blank" class="btn btn-q"><span class="material-icons btn-icon" style="font-size:1rem">picture_as_pdf</span>問題</a>
+                    <a href="https://drive.google.com/file/d/1ZGRsnpEt04j9J6loFfIAACbA0ELe_UDA/view?usp=sharing" target="_blank" class="btn btn-a"><span class="material-icons btn-icon" style="font-size:1rem">article</span>略解</a>
+                </div>
+            </div>
+            <div class="arc-row">
+                <span class="arc-name">2017年 期末試験 (平均80.5)</span>
+                <div class="btn-group">
+                    <a href="https://drive.google.com/file/d/19E6bY_YBKYej_37IlvSDEkXQ9q6B3Np9/view?usp=sharing" target="_blank" class="btn btn-q"><span class="material-icons btn-icon" style="font-size:1rem">picture_as_pdf</span>問題</a>
+                    <a href="https://drive.google.com/file/d/1c0egEA_6bCFOqx5mjlEACTEuyK6kcuwt/view?usp=sharing" target="_blank" class="btn btn-a"><span class="material-icons btn-icon" style="font-size:1rem">article</span>略解</a>
+                </div>
+            </div>
+            <div class="arc-row">
+                <span class="arc-name">2016年 期末試験</span>
+                <div class="btn-group">
+                    <a href="https://drive.google.com/file/d/1aMRe5A4AN42AIt05O4JtBfVjB_dXQfGH/view?usp=sharing" target="_blank" class="btn btn-q"><span class="material-icons btn-icon" style="font-size:1rem">picture_as_pdf</span>問題</a>
+                    <a href="https://drive.google.com/file/d/1zr9VeCh7sqpm4NKR037x2WTizrrMWKv8/view?usp=sharing" target="_blank" class="btn btn-a"><span class="material-icons btn-icon" style="font-size:1rem">article</span>略解</a>
+                </div>
+            </div>
+            <div class="arc-row">
+                <span class="arc-name">2015年 期末試験</span>
+                <div class="btn-group">
+                    <a href="https://drive.google.com/file/d/1wEGEeTD4RIybQ68rAbqSAQT9AsiDZuY5/view?usp=sharing" target="_blank" class="btn btn-q"><span class="material-icons btn-icon" style="font-size:1rem">picture_as_pdf</span>問題</a>
+                    <a href="https://drive.google.com/file/d/1h8lk2xOf55VYqm0u3BmjqCp4DnkLMMVt/view?usp=sharing" target="_blank" class="btn btn-a"><span class="material-icons btn-icon" style="font-size:1rem">article</span>略解</a>
+                </div>
+            </div>
+            <div class="arc-row">
+                <span class="arc-name">2014年 期末試験</span>
+                <div class="btn-group">
+                    <a href="https://drive.google.com/file/d/10ke_7xR4i2tllTMSyjqd0PlV6WNosHwI/view?usp=sharing" target="_blank" class="btn btn-q"><span class="material-icons btn-icon" style="font-size:1rem">picture_as_pdf</span>問題</a>
+                    <a href="https://drive.google.com/file/d/1adf715Ua0CYZEWuEdEpNg4C-flfwLQlv/view?usp=sharing" target="_blank" class="btn btn-a"><span class="material-icons btn-icon" style="font-size:1rem">article</span>略解</a>
+                </div>
+            </div>
+            <div class="arc-row">
+                <span class="arc-name">2013年 期末試験</span>
+                <div class="btn-group">
+                    <a href="https://drive.google.com/file/d/1h16IPp2986EoJbkWt06Hgu5CPgzj9x3f/view?usp=sharing" target="_blank" class="btn btn-q"><span class="material-icons btn-icon" style="font-size:1rem">picture_as_pdf</span>問題</a>
+                    <a href="https://drive.google.com/file/d/14dqJK5-82D1QbeKc6SlixTot3HhCy1kv/view?usp=sharing" target="_blank" class="btn btn-a"><span class="material-icons btn-icon" style="font-size:1rem">article</span>略解</a>
+                </div>
+            </div>
+            <div class="arc-row">
+                <span class="arc-name">2012年 期末試験</span>
+                <div class="btn-group">
+                    <a href="https://drive.google.com/file/d/1q679LOcKbMlWxfO2Dt3c7sCD95FS-i6p/view?usp=sharing" target="_blank" class="btn btn-q"><span class="material-icons btn-icon" style="font-size:1rem">picture_as_pdf</span>問題</a>
+                    <a href="https://drive.google.com/file/d/15j0k46FAhzGISjn3MuJXi84wQgOzdCrR/view?usp=sharing" target="_blank" class="btn btn-a"><span class="material-icons btn-icon" style="font-size:1rem">article</span>略解</a>
+                </div>
+            </div>
+            <div class="arc-row">
+                <span class="arc-name">2012年 中間試験</span>
+                <div class="btn-group">
+                    <a href="https://drive.google.com/file/d/1TXt39tJp3d-Fkf1ItT2NOY-pP44CxgEF/view?usp=sharing" target="_blank" class="btn btn-q"><span class="material-icons btn-icon" style="font-size:1rem">picture_as_pdf</span>問題</a>
+                    <a href="https://drive.google.com/file/d/1hQOUJwQLeLM4pqvOvRmhLMxJVVosj6CH/view?usp=sharing" target="_blank" class="btn btn-a"><span class="material-icons btn-icon" style="font-size:1rem">article</span>略解</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
